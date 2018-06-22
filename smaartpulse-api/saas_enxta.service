@@ -1,0 +1,11 @@
+[Unit]
+Description=simple python script
+
+[Service]
+#Environment= MY_ENVIRONMENT_VAR =/path/to/file.config
+WorkingDirectory=/opt/smaartpulse-api
+ExecStart=/home/sreenivasr/anaconda2/envs/ml/bin/python saas.py >/dev/null 2>&1
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

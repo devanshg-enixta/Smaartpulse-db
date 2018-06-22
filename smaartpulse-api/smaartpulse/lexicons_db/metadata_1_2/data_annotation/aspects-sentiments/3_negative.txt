@@ -1,0 +1,7 @@
+no zoom
+no front camera
+no led light
+no flash
+vga camera
+vga
+camera is vga

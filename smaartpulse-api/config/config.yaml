@@ -1,0 +1,19 @@
+AWS_ACCESS_KEY : ""
+AWS_SECRET_KEY : ""
+ 
+alert_mails:
+           "smaartalertinternal@enixta.com"
+
+contact_mail: "smaartalert@enixta.com"
+
+MAIL_CONFIG:
+           user: "GMAIL USERNAME"
+           passwd: "GMAIL PASSWORD/TOKEN"
+
+downloads_dir: "downloads/"
+
+PROCESSED_FILE_DIR_S3: "s3_bucket_path_for_processed_file"
+
+final_download_dir: "downloads/"
+
+email_type: "Test" # for testing environment

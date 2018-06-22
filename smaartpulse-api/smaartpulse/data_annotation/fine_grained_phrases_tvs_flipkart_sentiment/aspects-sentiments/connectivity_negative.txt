@@ -1,0 +1,3 @@
+
+not playing properly
+no audio out ports

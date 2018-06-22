@@ -1,0 +1,4 @@
+colour fade
+colour faded
+colour fades
+colour gone

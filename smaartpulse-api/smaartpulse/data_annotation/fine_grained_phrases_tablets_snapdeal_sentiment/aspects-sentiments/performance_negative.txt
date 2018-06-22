@@ -1,0 +1,51 @@
+lag
+lags
+heating
+heated
+lagging
+crashed
+restart
+restarts
+restarted
+crash
+freeze
+freezed
+freezes
+restarting
+freezing
+lagged
+crashing
+heats
+heat
+hot
+hangs
+hanged
+hung
+hang
+overheated
+overheating
+overheats
+over-heating
+over heats
+over heating
+hanging
+laggy
+laggs
+overheat
+over heat
+switched off automatically
+switches off
+turns off automatically
+turns off
+no extendable memory
+no expandable memory
+no sd slot
+no external sd slot
+no expandable
+no external sd card
+no external storage
+not expandable
+not extendable
+no memory
+no external memory
+

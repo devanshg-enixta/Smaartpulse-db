@@ -1,0 +1,1068 @@
+2018-06-01 10:06:07,620 - flask.app - INFO - 0605 - 127.0.0.1 - [GET - 200] /?
+2018-06-01 10:06:08,209 - flask.app - INFO - 0605 - 127.0.0.1 - [GET - 404] /favicon.ico?
+2018-06-01 10:07:13,256 - flask.app - ERROR - 0076 - Sent Error Response as: {'message': {'errors': ['Invalid file format! Please upload a file of type .txt or .csv or .zip'], 'messages': ['Invalid file type file_url. Please give a file of the format .txt or .csv or .zip']}}
+2018-06-01 10:07:13,257 - flask.app - INFO - 0605 - 127.0.0.1 - [GET - 299] /validate-input?file=file_url
+2018-06-01 10:08:29,057 - flask.app - ERROR - 0185 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 664, in make_request
+    retry_handler=retry_handler
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/connection.py", line 1068, in make_request
+    retry_handler=retry_handler)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/connection.py", line 942, in _mexe
+    request.body, request.headers)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 1053, in request
+    self._send_request(method, url, body, headers)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 1093, in _send_request
+    self.endheaders(body)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 1049, in endheaders
+    self._send_output(message_body)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 893, in _send_output
+    self.send(msg)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 855, in send
+    self.connect()
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 1274, in connect
+    server_hostname=server_hostname)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 352, in wrap_socket
+    _context=self)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 579, in __init__
+    self.do_handshake()
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 816, in do_handshake
+    match_hostname(self.getpeercert(), self.server_hostname)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 271, in match_hostname
+    % (hostname, ', '.join(map(repr, dnsnames))))
+CertificateError: hostname u'washing_machines_21052018_1.csv.s3.ap-south-1.amazonaws.com' doesn't match either of '*.s3.ap-south-1.amazonaws.com', 's3.ap-south-1.amazonaws.com', '*.s3-ap-south-1.amazonaws.com', 's3-ap-south-1.amazonaws.com', '*.s3.dualstack.ap-south-1.amazonaws.com', 's3.dualstack.ap-south-1.amazonaws.com', '*.s3.amazonaws.com'
+
+2018-06-01 10:08:31,025 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 216, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 186, in download_file
+    send_mail(alert_mails, "Some issue with the file download from S3!", str(Ex))
+  File "smartpulse_app.py", line 63, in send_mail
+    mailer.send_mail(*args, **kwargs)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/utils/mailer.py", line 40, in send_mail
+    smtpserver.login(user, passwd)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/smtplib.py", line 622, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, '5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials j5-v6sm100523720pfe.119 - gsmtp')
+2018-06-01 10:09:21,848 - flask.app - ERROR - 0185 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:09:23,314 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 216, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 186, in download_file
+    send_mail(alert_mails, "Some issue with the file download from S3!", str(Ex))
+  File "smartpulse_app.py", line 63, in send_mail
+    mailer.send_mail(*args, **kwargs)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/utils/mailer.py", line 40, in send_mail
+    smtpserver.login(user, passwd)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/smtplib.py", line 622, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, '5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials z16-v6sm48073095pge.90 - gsmtp')
+2018-06-01 10:09:46,138 - flask.app - ERROR - 0185 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:09:47,369 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 216, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 186, in download_file
+    send_mail(alert_mails, "Some issue with the file download from S3!", str(Ex))
+  File "smartpulse_app.py", line 63, in send_mail
+    mailer.send_mail(*args, **kwargs)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/utils/mailer.py", line 40, in send_mail
+    smtpserver.login(user, passwd)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/smtplib.py", line 622, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, '5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials o70-v6sm66866132pfo.49 - gsmtp')
+2018-06-01 10:12:27,217 - flask.app - ERROR - 0185 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:12:28,935 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 216, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 186, in download_file
+    send_mail(alert_mails, "Some issue with the file download from S3!", str(Ex))
+  File "smartpulse_app.py", line 63, in send_mail
+    mailer.send_mail(*args, **kwargs)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/utils/mailer.py", line 40, in send_mail
+    smtpserver.login(user, passwd)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/smtplib.py", line 622, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, '5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials k186-v6sm79542054pfc.142 - gsmtp')
+2018-06-01 10:18:14,424 - flask.app - ERROR - 0185 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:18:16,077 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 216, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 186, in download_file
+    #send_mail(alert_mails, "Some issue with the file download from S3!", str(Ex))
+  File "smartpulse_app.py", line 63, in send_mail
+    mailer.send_mail(*args, **kwargs)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/utils/mailer.py", line 40, in send_mail
+    smtpserver.login(user, passwd)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/smtplib.py", line 622, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, '5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials t17-v6sm6859458pfj.75 - gsmtp')
+2018-06-01 10:18:32,871 - flask.app - ERROR - 0185 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:18:32,871 - flask.app - ERROR - 0076 - Sent Error Response as: {'message': {'errors': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"], 'messages': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"]}}
+2018-06-01 10:18:32,872 - flask.app - INFO - 0605 - 127.0.0.1 - [GET - 298] /validate-input?file=/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv
+2018-06-01 10:20:37,801 - flask.app - ERROR - 0185 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:20:37,801 - flask.app - ERROR - 0076 - Sent Error Response as: {'message': {'errors': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"], 'messages': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"]}}
+2018-06-01 10:20:37,802 - flask.app - INFO - 0605 - 127.0.0.1 - [GET - 298] /validate-input?file=/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv
+2018-06-01 10:20:41,668 - flask.app - ERROR - 0185 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:20:41,669 - flask.app - ERROR - 0076 - Sent Error Response as: {'message': {'errors': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"], 'messages': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"]}}
+2018-06-01 10:20:41,669 - flask.app - INFO - 0605 - 127.0.0.1 - [GET - 298] /validate-input?file=/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv
+2018-06-01 10:21:38,689 - flask.app - ERROR - 0185 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:21:38,689 - flask.app - ERROR - 0076 - Sent Error Response as: {'message': {'errors': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"], 'messages': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"]}}
+2018-06-01 10:21:38,690 - flask.app - INFO - 0605 - 127.0.0.1 - [GET - 298] /validate-input?file=/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv
+2018-06-01 10:25:00,087 - flask.app - ERROR - 0185 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:25:00,088 - flask.app - ERROR - 0076 - Sent Error Response as: {'message': {'errors': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"], 'messages': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"]}}
+2018-06-01 10:25:00,088 - flask.app - INFO - 0605 - 127.0.0.1 - [GET - 298] /validate-input?file=/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv
+2018-06-01 10:25:18,916 - flask.app - ERROR - 0190 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:25:18,916 - flask.app - ERROR - 0076 - Sent Error Response as: {'message': {'errors': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"], 'messages': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"]}}
+2018-06-01 10:25:18,917 - flask.app - INFO - 0610 - 127.0.0.1 - [GET - 298] /validate-input?file=/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv
+2018-06-01 10:27:12,847 - flask.app - ERROR - 0190 - Traceback (most recent call last):
+  File "smartpulse_app.py", line 159, in download_file
+    b = c.get_bucket(bucket_name)  # substitute your bucket name here
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 502, in get_bucket
+    return self.head_bucket(bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 521, in head_bucket
+    response = self.make_request('HEAD', bucket_name, headers=headers)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 654, in make_request
+    host = self.calling_format.build_host(self.server_name(), bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 88, in build_host
+    return self.get_bucket_server(server, bucket)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 67, in wrapper
+    if len(args) == 3 and check_lowercase_bucketname(args[2]):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/boto/s3/connection.py", line 59, in check_lowercase_bucketname
+    raise BotoClientError("Bucket names cannot contain upper-case " \
+BotoClientError: BotoClientError: Bucket names cannot contain upper-case characters when using either the sub-domain or virtual hosting calling format.
+
+2018-06-01 10:27:12,848 - flask.app - ERROR - 0076 - Sent Error Response as: {'message': {'errors': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"], 'messages': ["There was some issue with file validation! An alert has sent to our internal team. Soon we'll comeback to you!!"]}}
+2018-06-01 10:27:12,849 - flask.app - INFO - 0610 - 127.0.0.1 - [GET - 298] /validate-input?file=/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv
+2018-06-01 10:28:44,469 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 221, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 188, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 10:29:43,189 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 221, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 188, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 10:29:55,963 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 221, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 188, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 10:30:35,066 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 10:30:48,570 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 10:31:02,802 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 10:31:25,206 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 11:38:14,995 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'static/lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 11:38:17,098 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'static/lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 11:39:22,271 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'static/lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 11:39:44,063 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'static/lexicons_db/washing_machines_21052018_1.csv'
+2018-06-01 11:39:49,853 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: ''
+2018-06-01 11:39:51,509 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: ''
+2018-06-01 11:40:06,926 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: ''
+2018-06-01 11:40:33,146 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'washing_machines_21052018_1.csv'
+2018-06-01 14:01:25,841 - flask.app - INFO - 0611 - 127.0.0.1 - [GET - 200] /validate-input?file=/static/washing_machines_21052018_1.csv
+2018-06-01 14:02:17,823 - flask.app - INFO - 0611 - 127.0.0.1 - [GET - 200] /validate-input?file=/static/washing_machines_21052018_1.csv
+2018-06-01 14:02:51,968 - flask.app - INFO - 0611 - 127.0.0.1 - [GET - 200] /validate-input?file=/static/washing_machines_21052018_1.csv
+2018-06-01 14:03:02,785 - flask.app - INFO - 0612 - 127.0.0.1 - [GET - 200] /validate-input?file=/static/washing_machines_21052018_1.csv
+2018-06-01 14:03:49,944 - flask.app - INFO - 0615 - 127.0.0.1 - [GET - 200] /validate-input?file=/static/washing_machines_21052018_1.csv
+2018-06-01 14:07:27,529 - flask.app - ERROR - 1560 - Exception on /run_smartpulse [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 420, in run_smartpulse
+    # download the file from the url
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/db_methods.py", line 50, in get_file_name
+    is_id = check_record('file_uploads', 'id', file_id)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/db_methods.py", line 38, in check_record
+    recs = con.execute("select * from {} where {}={};".format(table, column, value))
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2074, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2123, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2162, in _wrap_pool_connect
+    e, dialect, self)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2158, in _wrap_pool_connect
+    return fn()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/pool.py", line 403, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/pool.py", line 791, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/pool.py", line 532, in checkout
+    rec = pool._do_get()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/pool.py", line 1196, in _do_get
+    self._dec_overflow()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/pool.py", line 1193, in _do_get
+    return self._create_connection()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/pool.py", line 350, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/pool.py", line 477, in __init__
+    self.__connect(first_connect_check=True)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/pool.py", line 674, in __connect
+    connection = pool._invoke_creator(self)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 106, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 411, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pymysql/__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pymysql/connections.py", line 699, in __init__
+    self.connect()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pymysql/connections.py", line 936, in connect
+    self._request_authentication()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pymysql/connections.py", line 1156, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pymysql/connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pymysql/connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (pymysql.err.OperationalError) (1045, u"Access denied for user 'root'@'localhost' (using password: YES)") (Background on this error at: http://sqlalche.me/e/e3q8)
+2018-06-01 14:08:54,721 - flask.app - ERROR - 1560 - Exception on /run_smartpulse [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 436, in run_smartpulse
+    colmap)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/file_validation_saas/file_validation_checks.py", line 215, in order_columns
+    df = pd.read_csv(file_path, sep=',', quotechar='"', escapechar='\\')
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 709, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 449, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 818, in __init__
+    self._make_engine(self.engine)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1049, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1695, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 402, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 718, in pandas._libs.parsers.TextReader._setup_parser_source
+IOError: File washing_machines_21052018_1.csv does not exist
+2018-06-01 14:09:52,160 - flask.app - ERROR - 1560 - Exception on /run_smartpulse [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 436, in run_smartpulse
+    colmap)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/file_validation_saas/file_validation_checks.py", line 215, in order_columns
+    try:
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 709, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 449, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 818, in __init__
+    self._make_engine(self.engine)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1049, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1695, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 402, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 718, in pandas._libs.parsers.TextReader._setup_parser_source
+IOError: File washing_machines_21052018_1.csv does not exist
+2018-06-01 14:10:05,325 - flask.app - ERROR - 1560 - Exception on /run_smartpulse [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 436, in run_smartpulse
+    colmap)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/file_validation_saas/file_validation_checks.py", line 216, in order_columns
+    df = pd.read_csv(file_path, sep=',', quotechar='"', escapechar='\\')
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 709, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 449, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 818, in __init__
+    self._make_engine(self.engine)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1049, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1695, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 402, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 718, in pandas._libs.parsers.TextReader._setup_parser_source
+IOError: File washing_machines_21052018_1.csv does not exist
+2018-06-01 14:11:14,616 - flask.app - ERROR - 1560 - Exception on /run_smartpulse [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 436, in run_smartpulse
+    colmap)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/file_validation_saas/file_validation_checks.py", line 216, in order_columns
+    df = pd.read_csv(file_path, sep=',', quotechar='"', escapechar='\\')
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 709, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 449, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 818, in __init__
+    self._make_engine(self.engine)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1049, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1695, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 402, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 718, in pandas._libs.parsers.TextReader._setup_parser_source
+IOError: File washing_machines_21052018_1.csv does not exist
+2018-06-01 14:11:29,429 - flask.app - INFO - 0614 - 127.0.0.1 - [GET - 200] /validate-input?file=/static/washing_machines_21052018_1.csv
+2018-06-01 14:12:20,184 - flask.app - INFO - 0614 - 127.0.0.1 - [GET - 200] /validate-input?file=/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/static/washing_machines_21052018_1.csv
+2018-06-01 14:12:35,534 - flask.app - ERROR - 1560 - Exception on /run_smartpulse [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 436, in run_smartpulse
+    colmap)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/file_validation_saas/file_validation_checks.py", line 216, in order_columns
+    df = pd.read_csv(file_path, sep=',', quotechar='"', escapechar='\\')
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 709, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 449, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 818, in __init__
+    self._make_engine(self.engine)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1049, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1695, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 402, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 718, in pandas._libs.parsers.TextReader._setup_parser_source
+IOError: File devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/static/washing_machines_21052018_1.csv does not exist
+2018-06-01 14:13:25,308 - flask.app - ERROR - 1560 - Exception on /run_smartpulse [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 436, in run_smartpulse
+    colmap)
+  File "/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/file_validation_saas/file_validation_checks.py", line 216, in order_columns
+    df = pd.read_csv(file_path, sep=',', quotechar='"', escapechar='\\')
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 709, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 449, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 818, in __init__
+    self._make_engine(self.engine)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1049, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/pandas/io/parsers.py", line 1695, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 402, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 718, in pandas._libs.parsers.TextReader._setup_parser_source
+IOError: File static/washing_machines_21052018_1.csv does not exist
+2018-06-01 14:13:52,358 - flask.app - INFO - 0614 - 127.0.0.1 - [GET - 200] /validate-input?file=smaartpulse/static/washing_machines_21052018_1.csv
+2018-06-01 14:15:30,265 - flask.app - ERROR - 0076 - Sent Error Response as: {'message': {'errors': ['Invalid file format! Please upload a file of type .txt or .csv or .zip'], 'messages': ['Invalid file type docx. Please give a file of the format .txt or .csv or .zip']}}
+2018-06-01 14:15:30,265 - flask.app - INFO - 0614 - 127.0.0.1 - [GET - 299] /validate-input?file=smaartpulse/readme.docx
+2018-06-01 14:15:46,891 - flask.app - INFO - 0614 - 127.0.0.1 - [GET - 200] /validate-input?file=smaartpulse/Logging_pool.txt
+2018-06-01 14:16:08,668 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'Logging_pool.txt'
+2018-06-01 14:24:45,417 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 222, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 189, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'Logging_pool.txt'
+2018-06-01 14:26:19,131 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 223, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 190, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'Logging_pool.txt'
+2018-06-01 14:27:54,135 - flask.app - ERROR - 1560 - Exception on /validate-input [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 226, in file_validation
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 193, in download_file
+    shutil.move(file_path, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'Logging_pool.txt'
+2018-06-01 14:28:50,136 - flask.app - INFO - 0615 - 127.0.0.1 - [GET - 200] /validate-input?file=smaartpulse/Logging_pool.txt
+2018-06-01 14:29:07,890 - flask.app - ERROR - 1560 - Exception on /run_smartpulse [GET]
+Traceback (most recent call last):
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devanshg/dev/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "smartpulse_app.py", line 422, in run_smartpulse
+    file_name = download_file(file_url)
+  File "smartpulse_app.py", line 193, in download_file
+    shutil.move(url, file_name2)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'smaartpulse/Logging_pool.txt'

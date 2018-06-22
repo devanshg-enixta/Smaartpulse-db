@@ -1,0 +1,4 @@
+undelivered
+undeliverable
+non-serviceable
+non-servicable

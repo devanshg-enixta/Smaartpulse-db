@@ -1,0 +1,4 @@
+source~review_id~product_id~aspect~sentiment_text~review_text_tag_ind~start_index_partial_review~end_index_partial_review~start_index~end_index~confidence_score~treemap_name~category_id~sentiment_type~partial_review_text~review_text~flag
+1~a7ec3c98-5d46-4ef2-9b9b-be5674c8b811~WATE4VR6BUNJ8YUB~6~watch is really nice~~0~0~0~20~1.0~watch~34~positive~~Watch is really nice~1
+1~5344c84a-2cad-42bc-a259-01bc8d86c2e8~WATD9H769PFS65ZA~6~watch is awesome~~0~0~0~16~1.0~watch~34~positive~~Watch is awesome !!!!!!!!!! Only the box of the watch is not so good .but watch is great~1
+1~5344c84a-2cad-42bc-a259-01bc8d86c2e8~WATD9H769PFS65ZA~6~watch is great~~0~0~74~88~0.98~watch~34~positive~~Watch is awesome !!!!!!!!!! Only the box of the watch is not so good .but watch is great~1

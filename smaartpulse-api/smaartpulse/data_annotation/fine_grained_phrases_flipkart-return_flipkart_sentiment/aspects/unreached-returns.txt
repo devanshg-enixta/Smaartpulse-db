@@ -1,0 +1,6 @@
+code serviceability
+code service ability
+address buyer
+area
+availability
+returns area

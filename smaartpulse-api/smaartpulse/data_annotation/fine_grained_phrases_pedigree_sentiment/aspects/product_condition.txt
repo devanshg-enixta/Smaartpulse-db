@@ -1,0 +1,2 @@
+condition
+product conditionmanufactured datemanufacturing dateexpire datemfg dateexp dateexpiry dateconditionold stockmentioned expiry date

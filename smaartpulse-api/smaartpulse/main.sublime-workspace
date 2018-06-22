@@ -1,0 +1,410 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"X",
+				"X_train"
+			],
+			[
+				"file",
+				"file_name_pattern"
+			],
+			[
+				"sou",
+				"source_product_id"
+			],
+			[
+				"source",
+				"source_review_id"
+			],
+			[
+				"re",
+				"rename"
+			],
+			[
+				"df",
+				"df_empty_3"
+			],
+			[
+				"aspect",
+				"aspect_keyword"
+			],
+			[
+				"sen",
+				"sentiment_keyword"
+			],
+			[
+				"inp",
+				"input_df"
+			],
+			[
+				"col",
+				"cols_treemap"
+			],
+			[
+				"ge",
+				"generate"
+			],
+			[
+				"root",
+				"root_dir"
+			],
+			[
+				"senti",
+				"sentiment_keyword"
+			],
+			[
+				"phrase",
+				"phrase_dir"
+			],
+			[
+				"data",
+				"data_annotation"
+			],
+			[
+				"confi",
+				"confidence_score"
+			],
+			[
+				"conf",
+				"confidence_score"
+			],
+			[
+				"revi",
+				"review_text"
+			],
+			[
+				"sent",
+				"sent_keyword"
+			],
+			[
+				"qunat",
+				"quantitative_insights_file"
+			],
+			[
+				"confide",
+				"confidence_scores_indexes_sentiment"
+			],
+			[
+				"link",
+				"links_file"
+			],
+			[
+				"in",
+				"includes"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"mysto",
+				"mystop"
+			],
+			[
+				"start",
+				"start_rec"
+			],
+			[
+				"tem",
+				"temp_sub"
+			],
+			[
+				"tree",
+				"tree_files"
+			],
+			[
+				"del",
+				"del_dict"
+			],
+			[
+				"ar",
+				"aready"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"to",
+				"toString"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"tex",
+				"text_up_folder"
+			],
+			[
+				"dict",
+				"dict_up_folder"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/prepare_metadata.py",
+		"/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/snippet_correction.py",
+		"/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/product_source_map.py",
+		"/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/main.py",
+		"/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/treemap_domain_polarity_change_sentiment.py",
+		"/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/utils.py",
+		"/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/remove_bad_reviews.py",
+		"/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/sentence_tokenize_nltk.py",
+		"/Users/devanshg/Desktop/smartpulse_sreenivas/smaartpulse-api/smaartpulse/fine_grained_sentiment_search_NEW.py",
+		"/Users/devanshg/Desktop/temp_table_smartpulse.sql",
+		"/Users/devanshg/Desktop/enixta-machine-learning-master/Smaartpulse_Python_Base/treemap_domain_polarity_change_sentiment.py",
+		"/Users/devanshg/Desktop/enixta-machine-learning-master/Smaartpulse_Python_Base/main.py",
+		"/Users/devanshg/Desktop/enixta-machine-learning-master/Smaartpulse_Python_Base/conf_scores_indexes_sentiment.py",
+		"/Users/devanshg/Desktop/snippet_corrector.py",
+		"/Users/devanshg/Downloads/reviews_Home_and_Kitchen_5.json",
+		"/Users/devanshg/Desktop/enixta-machine-learning-master/Autoresponse/AutoResponse.py",
+		"/Users/devanshg/Desktop/enixta-machine-learning-master/Smaartpulse_Python_Base/fine_grained_sentiment_search_NEW.py",
+		"/Users/devanshg/Desktop/validation/flipkart_10th_may/ac/google_nlp_sentiment_api.py",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/fine_grained_sentiment_search_NEW.py",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/main.py",
+		"/Users/devanshg/Desktop/video_insights/vide_reviews_snippet_timings_creator.py",
+		"/Users/devanshg/Desktop/video_insights/treemap_outputfile_2018-5-3_landmarks_sentiment_poc.txt",
+		"/Users/devanshg/Desktop/video_insights/source_review_file_video_review.py",
+		"/Users/devanshg/Desktop/video_insights/landmarks_2500001_xnsNOEwiMHw.en_cleaned.srt",
+		"/Users/devanshg/Desktop/video_insights/landmarks_2500009.en_cleaned.srt",
+		"/Users/devanshg/Desktop/enixta-machine-learning-master/README.md",
+		"/Users/devanshg/Desktop/video_insights/landmarks_2500001.en_cleaned.srt",
+		"/Users/devanshg/Desktop/docs/my_codes/validation_enixta.py",
+		"/Users/devanshg/Desktop/video_insights/video_reviews.py",
+		"/Users/devanshg/Desktop/video_insights/landmarks_2500021.en_cleaned.srt",
+		"/Users/devanshg/Desktop/video_insights/nature_parks_2600023.en_cleaned.srt",
+		"/Users/devanshg/Desktop/video_insights/nature_parks_2600006.en_cleaned.srt",
+		"/Users/devanshg/Desktop/video_insights/museum_2800006.en_cleaned.srt",
+		"/Users/devanshg/Desktop/video_insights/test.srt",
+		"/Users/devanshg/Desktop/video_insights/landmarks_2500009.en.srt",
+		"/Users/devanshg/Desktop/video_insights/outdoor_activities_2700011.en.srt",
+		"/Users/devanshg/Desktop/video_insights/outdoor_activities_2700023.en.srt",
+		"/Users/devanshg/Desktop/video_insights/Museum_2800021.en.srt",
+		"/Users/devanshg/Desktop/insights/booking.com/Museum_2800006.en.srt",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/aspect_expansion_pmi.py",
+		"/Users/devanshg/Desktop/enixta-machine-learning-master/Smaartpulse_Python_Base/aspect_extraction/aspect_expansion_pmi.py",
+		"/Users/devanshg/Desktop/enixta-machine-learning-master/Autoresponse/file_upload_requests.py",
+		"/Users/devanshg/Desktop/speech_demo/smaartvid/app.py",
+		"/Users/devanshg/Desktop/sentiment_analyzer/vaderSentiment.py",
+		"/Users/devanshg/Desktop/validation/flipkart_26_apr/ac/google_nlp_sentiment_api.py",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/readme.md",
+		"/Users/devanshg/Downloads/file_upload_requests.py",
+		"/Users/devanshg/Desktop/speech_demo/smaartvid/srt_maker.py",
+		"/Users/devanshg/Desktop/speech_demo/smaartvid/video_to_text.py",
+		"/Users/devanshg/Desktop/DeepSpeech/DeepSpeech.py",
+		"/Users/devanshg/Desktop/docs/my_codes/nlp_vs_enixta.py",
+		"/Users/devanshg/Desktop/docs/my_codes/compar.py",
+		"/Users/devanshg/Downloads/Diarization_BIC-master/DIARIZATION/diarization_NoVADCOMPLETE/results/Untitled Document",
+		"/Users/devanshg/Downloads/Diarization_BIC-master/DIARIZATION/diarization_NoVADCOMPLETE/DIAR_MAIN.py",
+		"/Users/devanshg/Downloads/Diarization_BIC-master/DIARIZATION/readcsv.py",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/index.html",
+		"/Users/devanshg/Downloads/recording/PO042B3PCP3BF2A6SAS9TSGSN4025FCV-1093-85359500028918-2018-04-18-08-50-23-007102b86a2946bc-1093-6001-00B701AD-10FFCDFF-0001.srt",
+		"/Users/devanshg/Desktop/question1.cpp",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/app.py",
+		"/Users/devanshg/Downloads/PO042B3PCP3BF2A6SAS9TSGSN4025FCV-1093-85359500028918-2018-04-18-08-50-23-007102b86a2946bc-1093-6001-00B701AD-10FFCDFF-0001_in.srt",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/test_1.srt",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/srt_maker.py",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/video_to_text.py",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/app.js",
+		"/Users/devanshg/Desktop/PP/HandMovementTracking-master/Write.py",
+		"/Users/devanshg/Desktop/backup/app.py",
+		"/Users/devanshg/Desktop/insights/smaartpulse_emotion/lipstick/chart_pos.py",
+		"/Users/devanshg/Desktop/validation/flipkart/tablets/duplicates_merge_script.py",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/extract_audio.py",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/speech.html",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-2/main.js",
+		"/Users/devanshg/Desktop/validation/flipkart/ac/google_nlp_sentiment_api.py",
+		"/Users/devanshg/Desktop/saas_2018-04-11.sql",
+		"/Users/devanshg/Desktop/dumps/Dump20180411/saas_account.sql",
+		"/Users/devanshg/Downloads/saas_2018-04-11.sql",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-3/speech.html",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-3/index.html",
+		"/Users/devanshg/Desktop/murtu_KT_smartpulse_all.srt",
+		"/private/var/folders/c0/t00k7ffd6393272tg6b8k5bh0000gq/T/fz3temp-3/main.py",
+		"/Users/devanshg/Desktop/smaartrec/index.html",
+		"/Users/devanshg/Desktop/smaartrec/static/templates/js/main.js",
+		"/Users/devanshg/Desktop/backup/codes/dadji_10.en.srt",
+		"/Users/devanshg/Desktop/backup/codes/dadji_9.en.srt",
+		"/Users/devanshg/Desktop/backup/codes/dadji_8.en.srt",
+		"/Users/devanshg/Desktop/backup/codes/dadji_7.en.srt",
+		"/Users/devanshg/Desktop/backup/codes/dadji_6.en.srt",
+		"/Users/devanshg/Desktop/backup/codes/dadji_4.en.srt",
+		"/Users/devanshg/Desktop/backup/codes/dadji_3.en.srt",
+		"/Users/devanshg/Desktop/backup/codes/dadji_2.en.srt",
+		"/Users/devanshg/Desktop/backup/codes/dadji_0.en.srt",
+		"/Users/devanshg/Desktop/backup/codes/dadji_1.en.srt",
+		"/Users/devanshg/Desktop/index.html",
+		"/Users/devanshg/Downloads/daal/python/spark/sources/spark_CovarianceCSR.py",
+		"/Users/devanshg/Desktop/testing_accuracy/WER-in-python-master/wer.py",
+		"/Users/devanshg/Desktop/testing_accuracy/Online Guided Rejuvenation _ Cleanse & Energise Mind, Body & Soul With Divine Transmission-kD6cFScno-Y.en.srt",
+		"/Users/devanshg/Desktop/testing_accuracy/WER-in-python-master/test.srt",
+		"/Users/devanshg/Desktop/testing_accuracy/WER-in-python-master/test_old2.srt",
+		"/Users/devanshg/Desktop/speech_demo/smaartvid/DeepSpeech/README.md",
+		"/Users/devanshg/Desktop/speech_demo/smaartvid/DeepSpeech/util/feeding.py",
+		"/Users/devanshg/Desktop/speech_demo/smaartvid/DeepSpeech/DeepSpeech.py",
+		"/Users/devanshg/Desktop/insights/eureka forbes/chart.py",
+		"/Users/devanshg/Desktop/smaartrec/app.py"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "main.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 368.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

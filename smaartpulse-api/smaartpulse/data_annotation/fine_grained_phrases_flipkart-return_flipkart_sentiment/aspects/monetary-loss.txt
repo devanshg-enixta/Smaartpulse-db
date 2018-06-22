@@ -1,0 +1,10 @@
+payouts
+charge
+money
+cost
+courier charge
+claim amount
+margins
+rupees
+ruppes
+monetary

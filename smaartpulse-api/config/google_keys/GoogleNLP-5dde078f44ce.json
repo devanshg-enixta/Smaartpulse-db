@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "euphoric-point-191008",
+  "private_key_id": "5dde078f44ceae175508bcbf3d5f711b751cb1c6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDPPe/2wD+9sQdW\ncW9y8u7PETTrU3sqEjYmO0VK+DkMzV8HCaHg/KWgQgrVilw1yTZkmuYOKmzrm5Gt\nvpU7VVQT1mXcrg0BhQPuL/S0M6csQ7tj5PYd0N6AQoL3826xxAyn52fXu861fmWP\nhOeqC8ekFs8XVRJHTfjSAKXugNpjFMccT4dNjBYuuHUrJo/WWORi1UOUQ75M/4kI\nX09bprh3ypoIb8DaNFkSUjUJEZyUCjFj5sfvAQ0GGsTVkhj3xy2CwR98OU4SrglX\n7n+KkWX8QZcaUDGy+kWl4SoMpEJ3myUfCcLTvdVT49FdDuPV4x9gZNVqLsGC4I7W\nq5WF7wNDAgMBAAECggEALnmcW8CnSrnthFQyAxw5s9QPAwsYnsmwvQgjtPlPifBw\ndBqT4+mklvjYhyTdIu65tPwLxXd8L6YWmFkaDFFJZp15AHFD12hmBj9Y6CSBQ+r4\nliFdlDgn/alsx4Ae/dySXgEGB5pFc+whiHrsnPTBU6oNzRS14am5uBaPH5pj3z38\n+YIawkMvgT0q64es8RDCCEqbWOkgkfs85JLYQFk7XcGrgsZSIJqFVxoe+lToUkRT\n9liBdniB1XUKVyG3uzax1R76XPUR6RWs3TRieBFBSYTny/zjU46yep/13EOqqU92\nicDm31MlVEuqy6KM4Gv5hxMoW/mFpJOXMkCvySJxeQKBgQD5fIVLe8dwNDojTGqv\ngySay+yvAPCYYtfv7DN+zXDOtyz+rskLsxiyShq2RGvSWqXrR/65MGcTWoTdHrDA\n1bZBDQEqLiFiqvG/vdmC+Kw+kpblkwpj86wHUwZcuRvxBOLmD/YD7/3rVxGbyYNO\niyIvUCab+uETuf7BX66xIFKttwKBgQDUpxHNPYCvcl+XPGIF+JBBa1ngcQlxJLOg\ntTKKkITS7zEwdmCVFip5wwSdQpXkk0t3RQ7r8VeWhk/nVAL/zhELd9fmdzGP2cyX\nljF9Li3M6PmyyM5/r+hB44rt/+Er2/694R6Rr0RwrWSKaqzlWRd5TZi5MoPOCsWx\nbHgXu39W1QKBgDCMU5/xsUibUSjnSOdofKoGvsL7StZMfbq5Wvf04FvJd18EAild\nq5OeKf6H5/diHmFffCjrS1OPzMT+oOSVccbM0go0OdjqbOqj9fyviU0P139LEr2K\ngFJYjKdkehR3n/Om7Xesrtup8MpA92VEW92bGjhGJKBjFDjq9qKPKKeXAoGAKzeU\n95gjOgTNhofgCASfFJyDlIiEebkSxHtuvRhn1hKEdavpLwNlOH+4xVkN63k/4gpn\n4O2Ydl/vhzzcqy4u6py9hPn+WZTS7o+4mQ80gatra7lBtlOCqTlcN8hD88zu9Zn1\nw3fSOfATOco6PxYfHij1+9VXUh2AVfGMao5Rb80CgYEAmk6gENje2CjEew35vqRb\narGzsCCYSRzxAeR5R0IGklLgHzurE+WNrMQmPdOrut5c5bqyxYGgvYshEEl1rikR\nQJudpaOkLxsgwVZ3ShwrNXSzpLnr8ylGTnqfo7vXqObu1CC3Ea1H4Bp3wf0P11EI\nL0xt7Rc8sceEExq0pPjYgaM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "nlp-comparison@euphoric-point-191008.iam.gserviceaccount.com",
+  "client_id": "101262029294608279553",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nlp-comparison%40euphoric-point-191008.iam.gserviceaccount.com"
+}

@@ -1,0 +1,96 @@
+STATUS       |
+| category_id  |
+| file_id      |
+| id           |
+| product_id   |
+| review_id    |
+| review_text  |
+| review_title |
+| sentence     |
+| star_rating  |
+\
+
+
+
+
+ STATUS            |
+| aspect            |
+| aspect_keyword    |
+| category_id       |
+| file_id           |
+| id                |
+| product_id        |
+| review_id         |
+| review_text       |
+| review_title      |
+| sentence          |
+| sentiment         |
+| sentiment_keyword |
+| star_rating       |
+
+
+
+
+
+
+self.review_snippets_name = 'reviews_temp_snippets_tokenize_{}'.format(file_id)
+self.review_snippets_table_query = "CREATE TABLE {} (`STATUS` bigint(20), " \
+                          "`category_id` bigint(20) NOT NULL, `file_id` bigint(20) NOT NULL, " \
+                          "`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT, "\" 
+                          "`product_id` varchar(255) NOT NULL DEFAULT '', " \
+                          "`review_id` varchar(255) NOT NULL DEFAULT '', " \
+                          "`review_text` text DEFAULT NULL, " \
+                          "`review_title` varchar(1024) NULL DEFAULT '', " \
+                          "`sentence` text DEFAULT NULL, " \
+                          "`star_rating` varchar(255) COLLATE utf8_bin DEFAULT NULL," \
+                          "`aspect` varchar(1024) NULL DEFAULT '', " \
+                          "`aspect_keyword` varchar(1024) NULL DEFAULT '', " \
+                          "`sentiment` varchar(1024) NULL DEFAULT '', " \
+                          "`sentiment_keyword` varchar(1024) NULL DEFAULT '', " \
+						  "`confidence_score` double(5,2) DEFAULT NULL, " \
+                          "`sentiment_text` varchar(999) DEFAULT NULL, " \
+                          "`review_text_tag_ind` varchar(999) DEFAULT NULL, " \
+                          "`treemap_name` varchar(999) DEFAULT NULL, " \
+                          "`start_index` int(11) DEFAULT NULL, " \
+                          "`end_index` int(11) DEFAULT NULL, " \
+                          "`start_index_partial_review` int(11) DEFAULT NULL, " \
+                          "`end_index_partial_review` int(11) DEFAULT NULL," \
+                          "`partial_review_text` text DEFAULT NULL," \
+                          "PRIMARY KEY (`id`)) " \
+                          "ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;".format(self.review_snippets_name)
+
+self.review_fined_grained_name = 'reviews_temp_fined_grained_{}'.format(file_id)
+self.review_fined_grained_table_query = "CREATE TABLE {} (`STATUS` bigint(20), " \
+                          "`aspect` varchar(1024) NULL DEFAULT '', " \
+                          "`aspect_keyword` varchar(1024) NULL DEFAULT '', " \
+                          "`category_id` bigint(20) NOT NULL, `file_id` bigint(20) NOT NULL, " \
+                          "`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT, "\" 
+                          "`product_id` varchar(255) NOT NULL DEFAULT '', " \
+                          "`review_id` varchar(255) NOT NULL DEFAULT '', " \
+                          "`review_text` text DEFAULT NULL, " \
+                          "`review_title` varchar(1024) NULL DEFAULT '', " \
+                          "`sentence` text DEFAULT NULL, " \
+                          "`sentiment` varchar(1024) NULL DEFAULT '', " \
+                          "`sentiment_keyword` varchar(1024) NULL DEFAULT '', " \
+                          "`star_rating` varchar(255) COLLATE utf8_bin DEFAULT NULL," \
+                          "PRIMARY KEY (`id`)) " \
+                          "ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;".format(self.review_fined_grained_name)
+
+self.review_fined_grained_name = 'reviews_temp_conf_score_sentiment_text_{}'.format(file_id)
+self.review_fined_grained_table_query = "CREATE TABLE {} (`STATUS` bigint(20), " \
+                          "`aspect` varchar(1024) NULL DEFAULT '', " \
+                          "`aspect_keyword` varchar(1024) NULL DEFAULT '', " \
+                          "`category_id` bigint(20) NOT NULL, `file_id` bigint(20) NOT NULL, " \
+                          "`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT, "\" 
+                          "`product_id` varchar(255) NOT NULL DEFAULT '', " \
+                          "`review_id` varchar(255) NOT NULL DEFAULT '', " \
+                          "`review_text` text DEFAULT NULL, " \
+                          "`review_title` varchar(1024) NULL DEFAULT '', " \
+                          "`sentence` text DEFAULT NULL, " \
+                          "`sentiment` varchar(1024) NULL DEFAULT '', " \
+                          "`sentiment_keyword` varchar(1024) NULL DEFAULT '', " \
+                          "`star_rating` varchar(255) COLLATE utf8_bin DEFAULT NULL," \
+                          "PRIMARY KEY (`id`)) " \
+                          "ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;".format(self.review_fined_grained_name)
+
+

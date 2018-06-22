@@ -1,0 +1,18 @@
+no light
+no door alarm
+no alarm
+no clock
+no fm
+no basket
+no chamber
+no cabinet
+no space
+no wheels
+no wheel
+no racks
+no screen
+no panel
+no modes
+no rods
+no lock
+

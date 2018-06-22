@@ -1,0 +1,4 @@
+1~flipkart
+2~buysmaart
+3~amazon
+4~snapdeal

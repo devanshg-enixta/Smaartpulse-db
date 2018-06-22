@@ -1,0 +1,11 @@
+source~review_id~product_id~aspect~sentiment_text~review_text_tag_ind~start_index_partial_review~end_index_partial_review~start_index~end_index~confidence_score~treemap_name~category_id~sentiment_type~partial_review_text~review_text~flag
+1~a7ec3c98-5d46-4ef2-9b9b-be5674c8b811~WATE4VR6BUNJ8YUB~6~watch is really nice~~0~0~~~1.0~watch~34~positive~~Watch is really nice~
+1~bd8b2a37-eff1-4c4f-8a52-bc2c041cd7b3~WATD9H765U2DVW6G~6~not good product~~0~0~~~1.0~product~34~negative~~not good product damage~
+1~5344c84a-2cad-42bc-a259-01bc8d86c2e8~WATD9H769PFS65ZA~6~watch is awesome~~0~0~~~0.96~watch~34~positive~~Watch is awesome !!!!!!!!!! Only the box of the watch is not so good .but watch is great~
+1~5344c84a-2cad-42bc-a259-01bc8d86c2e8~WATD9H769PFS65ZA~6~box of the watch is not so good~~0~0~~~0.96~box_of_the_watch~34~negative~~Watch is awesome !!!!!!!!!! Only the box of the watch is not so good .but watch is great~
+1~5344c84a-2cad-42bc-a259-01bc8d86c2e8~WATD9H769PFS65ZA~6~watch is great~~0~0~~~0.99~watch~34~positive~~Watch is awesome !!!!!!!!!! Only the box of the watch is not so good .but watch is great~
+1~e7218833-a5e0-467d-a122-5930557e46a2~WATD9H76F6HGQNYV~6~key rod is not assembled its individual attachment~~0~0~~~0.99~key_rod~34~negative~~Very very disappointed .Key rod is not assembled its Individual attachment.I just check outer that product is came or not at the time of delivery..My bad luck I check the product after 10days on my dad birthday !!!.Now roaming around service centres ..!!~
+1~e7218833-a5e0-467d-a122-5930557e46a2~WATD9H76F6HGQNYV~6~luck i check the product~~0~0~~~0.99~product~34~positive~~Very very disappointed .Key rod is not assembled its Individual attachment.I just check outer that product is came or not at the time of delivery..My bad luck I check the product after 10days on my dad birthday !!!.Now roaming around service centres ..!!~
+1~fad0ba48-5087-4ce4-b1d3-86c15a212261~WATD9H762FG82MZK~6~excellent watch~~0~0~~~0.96~watch~34~positive~~Excellent watch and works perfectly~
+1~546b1c86-b0a5-466c-b957-283de477933d~WATD9H7633ZWDNDH~6~watch seized to function in less~~0~0~~~1.0~watch~34~positive~~The watch seized to function in less than 40 days.~
+1~546b1c86-b0a5-466c-b957-283de477933d~WATD9H7633ZWDNDH~2~seized to function in less~~0~0~~~0.96~seized_to~34~positive~~The watch seized to function in less than 40 days.~
