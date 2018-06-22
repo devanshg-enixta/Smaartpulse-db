@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "crafty-acumen-196010",
+  "private_key_id": "ebf44469bf75f674c518294caba0b9850049bfdc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDSULpH3cgDcKDY\nhRalOomAyCpp/2JGXxMCc5va9lksSSdF7gbKxM9D/yYeJTffQHFYr1sf8x4SRSKo\n0gwv9uxCmIrMcJAxootYfu3FXQi7twhAiKVoLtK686pvkZL5XPWGkdUfdY6YOcW/\n8UWET42qzn6VDlX/lsQj1CFGSoixioEEb1SvLgykm0cn1rxJx4eYcBe07NQrhYfz\nAWeWTdJak672EGmo55xY2yB6JHXlAh0UoZYl9W9j2+x4KweFTJo7QUVzLddxVkUt\n+oaKqYZlQMTGCLU3PDU3d7l71tQEADqK+C1IP2PmkfiQ7+WvW9Wqx7oVz2ADdq2E\n+706ydTPAgMBAAECggEABa2zUeRtlZYxaZcyVNS/SLBe4MzJ8P95KmxHrYJQRw9U\nlaFHIqtsszfM5ix4FTmOtefKLJMqYTDnrio5tQPUPjoTKVDyu7xZSdLnhZgs97CJ\n8wAdgzIcc3rHw8po7v2xDWibmgVZC8gnjDat+1QQjaeUqF6iOMvv0M3V9ilmBnEb\n4fSyfVtXm92a7SVqPaeSeiOEBUcaQ0gB4bd/2ScXQoELxH6jV3w0f4bNAn7LZeYD\n+mU0tFjPb+Vfaevn6N90Zl9Od3YfzyIkTgup82iPZw1Re3E7ojZLeyPUXBzqvvSr\n0K8//eBlRB3QmNwhf31ZhLnskjQSgfsK3Gyz28eA1QKBgQDoCYkcJ6M/VUdIcTbB\nZ67IWkNw1by1W+Deu8o7RZuEFLDt7h2bfry+88myH31TjOoW6cGujr2UW+0TfoIX\nW5XymJ1+Z9hj9JjzfOStTTJlBWLIlm15e71Mdwz8a7qhQx18zJAdc71aXaaVRTbP\nfN2+zuNfjo9RTcupwybHiCxe7QKBgQDoCOvMc0/svw659QCQ5lG6ujuswtBpsk7G\nC6+awGSzdV3ngiOVgdU4bu9a7M0y4Z5fFRMazCqmMfz7E12WbMoS75OGaKKYagLq\ngyfu7kFETAPP81GVXZzmqc2M957JYIuJP4SuhM8grk5QUXoaFgOMr0S8TysfH1hI\nxXCD6h4PKwKBgDhBf5Vs4r5LHaIpmJ3hVlXK1Ij5uOu7X9SAcPJX2PF31sGItnLp\nkjc1gdQGoGruQh7WA5gfkUTz2JGeXUnucXdEmwJ3iNYLCj4WLJb7nVkyqhV5qwcG\nAgoU3vgf4jqQvAhyzAnn8qODCw0rn7NEUbqeDDAxrvuGQfdhkfhUQnWtAoGBAOXS\ncDtAu5kyY9Or57OdbLYWX6TuEJ+gDIX8bSJKDXPye+Ah9jzPK/GJb2oPwe7zqXlj\n1lhkgJm8SWYl+DxV5JB82xH18ZYk6l59KcBuHBcZc201A0l+Pzn4Va+aU5wCFDMM\nxs5UnRMxkj/bc6UCyOE/eEVL5NoeocLyTE9cRAmhAoGBAJvIe2RZ7DfQi1cQZ7bp\nDez+Ep/aKeEJjagk5Fc2EDTSV6CiCAjExhVj5eA+HqydO82JvqrrGs1bKJ/3sV48\nGO27x2x9VNWEZI5ExYJXxNoai9Q05VlK927RaQwNBQXaWHO8DYlL4vw+I2JBsugU\nvU53ntsMh0nCm6TPcgdE4rkA\n-----END PRIVATE KEY-----\n",
+  "client_email": "test-612@crafty-acumen-196010.iam.gserviceaccount.com",
+  "client_id": "104672890584570600027",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/test-612%40crafty-acumen-196010.iam.gserviceaccount.com"
+}

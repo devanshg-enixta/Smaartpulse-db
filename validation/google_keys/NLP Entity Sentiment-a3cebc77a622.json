@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nlp-entity-sentiment",
+  "private_key_id": "a3cebc77a6223c580a8c3e8d8dfe8df53f95f714",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCtOBX1JNN9ScqQ\n5ACru7TsEUo/Ap+8mLgz70ksbUxd5Pp2CM0OXHXDFFPXogccqQE4Nx2mlfxcEFjM\n7/NUY5uyrMOZICo+0WQuE/AD9KN0+EuLNn0FEHCa63sa/EpNPG3sICOPE8oemt5R\nDkQEYBHjyUOgexRhP+zgnXQsHVR1/J+wbNdNFmJ/d0GKUQVz/b13DTHWowJQwV/J\nPBJ/g/zg6L7Zmq+jkkDM5MB7l5dV/+lMaxpIVZNVv0O6GfzXOiYCAHKOJ1UY1Fd6\ni2vm6Iddnvhhu2pD2ug4fb5oGb5VPxvBchvrjbYNoSqOnFRsMvg9sU+3f9bo47ML\np+N7moRhAgMBAAECggEAAzMDrU6eARy0ewT6CfH2ZUyLs/KaBY1GzC9DiUh2wk5z\nDYxrsKPmqSjqREOd6OKqdwnGEHxJUCA9aqIVKwIot1Xraivq2dSLWpJD0ufhH71B\nBHAIArifMs5N/JVrsCXhRBzjGT6440QyHlpCiXfmhq/yQb/aNFJeXzbrRRAQ3fm5\n5FFmH8BKMhAtj6Bhqm8f/8wTX4a7BVzUyAgkjo/t/96hsKe7xcBKuBRl/D7ATu/O\n2Yywqtqz4Bod3cWnlA/g50y1U98rIdgIfKLQoRrrQyRfjTLHFoFCMWrz/L8sm0Ti\nqr9PII28kJgUkS2oNheleoBqdTJIuf+/mxS6C7qiAQKBgQDgLH++StwrUduWqKFh\nLjdbRMwzhnu9UCJ7PrilyOmgztuBOpYcuu75ShJYaNLh9HQmsyJ3ORneaWL4OZBQ\nQipA2p2arm/ptcwS1yT0882Y5zqkZXsMyzki3lXvSXWQ1LnkgPa3509LO4D4AtmA\nuFOwuViVT0zlgLCcrCxUlYn/YQKBgQDFz6iji4gR2qnFi3LNRneGEv1l+fKfwNIL\nNRKdFrrPlquVg/Z8M+3geYEqfCyo3Pe070Yh6B8Dkv4sdmUXRlRVeOSvzinPcn0/\nK3WHxF46T0ouTEI1QQqhRLX6uXXTVp6wGxDdMR9eZEbkpfcdnqxwlODwUG8hF4Uc\nkZ2butelAQKBgE++ZJ67oIBkeRmp2OZp+1UjLwSxNTlN1UZENIj85GbIzvq0bYvA\nz5usRsReXY31WJAfrwX8MQCWOpeUWorCTqeNXP0WSkc33WViVQox5BQdRRYP52rQ\nq/2EW8toNUMU+R+Y5KrcxK89do5C7T5F07eM5z8N24vUcH77HDXmkBVhAoGAJHSG\n0c0vQIsZ6qwudiJceLsbNCYCTurMSwB287hyqTtNV/q//FfdqRb7dQb5fA1tIU1P\nkYQj4xa9/Re8vbNaa34iNzw5fF/PMUsjF+harUhblXi8YvAfs2TkXNa9HjvCdxYl\n333kGBNG9XCYwD6z7POjGObZ9DFPeNplP4QJpgECgYBPYS3jWFcia4IvcvhnUftS\ndobWdhOf3xUwQrdJf/SCoesHc/nqfeX+3q+j/QOLAdhmdoq1YB7n4I1GpzPvKI6e\nOYWhT1j66Hx+2YeUg2Tro9rMkDB/iinSpo1nJziqjb3mfMqdXdMgKg5QDdQTjcoI\nP/L0ajadD0/R3UhohUpQPg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "nlp-entity-sentiment@nlp-entity-sentiment.iam.gserviceaccount.com",
+  "client_id": "110060716900003186313",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nlp-entity-sentiment%40nlp-entity-sentiment.iam.gserviceaccount.com"
+}
