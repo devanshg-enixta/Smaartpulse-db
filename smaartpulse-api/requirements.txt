@@ -22,7 +22,7 @@ numpydoc==0.6.0
 oauth2client==3.0.0
 odo==0.5.0
 pandas==0.21.1
-Pillow==4.0.0
+Pillow==6.2.0
 proto-google-cloud-language-v1beta2==0.15.3
 proto-google-cloud-pubsub-v1==0.15.4
 protobuf==3.5.1
