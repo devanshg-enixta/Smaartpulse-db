@@ -5,7 +5,7 @@ botocore==1.8.8
 Cython==0.25.2
 cytoolz==0.8.2
 Flask==0.12
-Flask-Cors==3.0.2
+Flask-Cors==3.0.9
 gapic-google-cloud-language-v1beta2==0.15.3
 gapic-google-cloud-pubsub-v1==0.15.4
 gensim==3.1.0
